@@ -8,7 +8,13 @@ import { makeStyles } from "@material-ui/styles";
 import { withStyles } from "@material-ui/styles";
 import { ListItem } from "@material-ui/core";
 
+import Overview from './Overview';
+import Resume from './Resume';
+import Projects from './Projects';
+import Achievements from './Achievements';
+
 const drawerWidth = 300;
+const contentElement = document.getElementById('content');
 
 const classes = makeStyles(theme => ({
   drawer: {
@@ -35,19 +41,19 @@ const StyledListItem = withStyles({
 })(ListItem);
 
 function overviewHandle() {
-  alert("Overview click");
+  ReactDOM.render(<Overview />, contentElement);
 }
 
 function resumeHandle() {
-  alert("Resume click")
+  ReactDOM.render(<Resume />, contentElement);
 }
 
 function projectsHandle() {
-  alert("Projects click")
+  ReactDOM.render(<Projects />, contentElement);
 }
 
 function achievementsHandle() {
-  alert("Achievements click")
+  ReactDOM.render(<Achievements />, contentElement);
 }
 
 function SideBar() {
