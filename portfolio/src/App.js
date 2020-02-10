@@ -9,7 +9,7 @@ import { withStyles } from "@material-ui/styles";
 import { ListItem } from "@material-ui/core";
 
 import Overview from './Overview';
-import Resume from './Resume';
+import Experience from './Experience';
 import Projects from './Projects';
 import Achievements from './Achievements';
 
@@ -18,7 +18,6 @@ const contentElement = document.getElementById('content');
 
 const classes = makeStyles(theme => ({
   drawer: {
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
     width: drawerWidth,
     flexShrink: 0
   }
@@ -44,8 +43,8 @@ function overviewHandle() {
   ReactDOM.render(<Overview />, contentElement);
 }
 
-function resumeHandle() {
-  ReactDOM.render(<Resume />, contentElement);
+function experienceHandle() {
+  ReactDOM.render(<Experience />, contentElement);
 }
 
 function projectsHandle() {
@@ -63,8 +62,8 @@ function SideBar() {
         <StyledListItem button onClick={overviewHandle}>
           <ListItemText primary="Overview" />
         </StyledListItem>
-        <StyledListItem button onClick={resumeHandle}>
-          <ListItemText primary="Resume" />
+        <StyledListItem button onClick={experienceHandle}>
+          <ListItemText primary="Experience" />
         </StyledListItem>
         <StyledListItem button onClick={projectsHandle}>
           <ListItemText primary="Projects" />
